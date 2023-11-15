@@ -4,14 +4,24 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: grey;
     justify-content: center;
     align-items: center;
     display: flex;
+    z-index: 2;
 }
 
 .modale_closed {
     display: none;
+}
+
+.modale-opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: grey;
+    opacity: 0.7;
 }
 
 .modale-textbox {
