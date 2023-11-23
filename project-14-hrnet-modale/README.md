@@ -18,10 +18,40 @@ In the project directory, you can run:
 
 Import react component in desired file then
 
-### call it `<Modale src={yourSvgFile}/>`
+### how to use it 
 
-You can display modale like this, make sure to add your svg file in props to display a custom close modale button
+You can display modale by setting a usestate to false and then call the modal with it like so : \
+```js
+import { Modale } from "project-14-hrnet-modale/dist/Modale.js";
+import { useEffect, useState } from "react";
 
-### style
+export default function App() {
 
-you can style modale and all children by checking class names with page inspector
+    const [displayModale, setDisplayModale] = useState(false);
+    useEffect(() => {
+       setDisplayModale(true)
+    },[])
+
+  return (
+    <div>
+        {displayModale && <Modale setDisplayModale={setDisplayModale}/>}
+    </div>
+  );
+}
+```
+### options
+
+There is some options you can had to customise your utilisation, you have to add it in Modale props like so :\
+
+```js
+const options = {   
+    escapeClose: true,   //add ability to close modal with escape
+    clickClose: true,   //add ability to click at grey background to close modal
+    closeText: 'Employee Created',   //custom content text to display in modal
+    showClose: true, //add ability to close modal with an X cross on top right corner
+    modalClass: "modale", //select modal name to custom css
+    blockerClass: "modale-opacity", //select modal background name to custom css
+  }
+
+<Modale setDisplayModale={setDisplayModale} options={options}/>
+```

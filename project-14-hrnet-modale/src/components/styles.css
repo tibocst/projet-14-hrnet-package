@@ -10,10 +10,6 @@
     z-index: 2;
 }
 
-.modale_closed {
-    display: none;
-}
-
 .modale-opacity {
     position: absolute;
     top: 0;
