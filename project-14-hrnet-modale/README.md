@@ -14,7 +14,7 @@ In the project directory, you can run:
 
 ## How to use package
 
-### import `import { Modale } from "project-14-hrnet-modale/dist/Modale.js";`
+### import `import { Modale } from "project-14-hrnet-modale";`
 
 Import react component in desired file then
 
@@ -22,7 +22,7 @@ Import react component in desired file then
 
 You can display modale by setting a usestate to false and then call the modal with it like so : \
 ```js
-import { Modale } from "project-14-hrnet-modale/dist/Modale.js";
+import { Modale } from "project-14-hrnet-modale";
 import { useEffect, useState } from "react";
 
 export default function App() {
